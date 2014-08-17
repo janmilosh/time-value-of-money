@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Loan Calculator and Savings Calculator</title>
+
+	<!-- Included CSS Files (Uncompressed) -->
+	<!--
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	-->
+
+	<!-- Included CSS Files (Compressed) -->
+	<link rel="stylesheet" href="stylesheets/foundation.min.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<!--[if lt IE 9]><link rel="stylesheet" href="stylesheets/ie-eight.css" type="text/css" media="screen, projection" /><![endif]-->
+	<script src="javascripts/modernizr.foundation.js"></script>
+</head>
+<body>
+<div class="row full-width">
+	<div class="six columns mobile-two">
+		<p class="promo">Built by <a href="http://janmilosh.com" target="_blank">Jan Milosh</a></p>
+	</div>
+	<div class="six columns mobile-two">
+		<p class="reset"><a href="#" onclick="reloadPage()">Clear Page</a></p>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+		<h1>Loan Calculator</h1>
+		<form name="form">
+			<table id="loan-table">
+				<thead>
+					<tr>
+						<th>Loan Amount</th>
+						<th>Yearly Interest</th>
+						<th>No. of Months</th>
+						<th>Monthly Payment</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="calculate-row">
+						<td><input type="text" id="presentValue1" name="presentValue1"></td>
+						<td><input type="text" id="yearlyInterest1" name="yearlyInterest1"></td>
+						<td><input type="text" id="numberOfMonths1" name="numberOfMonths1"></td>
+						<td><a class="calculate-button" href="#" onclick="calculateMonthlyPayment()">Calculate</a></td>
+					</tr>
+					<tr class="calculate-row">
+						<td><input type="text" id="presentValue2" name="presentValue2"></td>
+						<td><input type="text" id="yearlyInterest2" name="yearlyInterest2"></td>
+						<td><a class="calculate-button" href="#" onclick="calculateNumberOfMonths()">Calculate</a></td>
+						<td><input type="text" id="monthlyPayment2" name="monthlyPayment2"></td>
+					</tr>
+					<tr class="calculate-row">
+						<td><a class="calculate-button" href="#" onclick="calculatePresentValue()">Calculate</a></td>
+						<td><input type="text" id="yearlyInterest3" name="yearlyInterest3"></td>
+						<td><input type="text" id="numberOfMonths3" name="numberOfMonths3"></td>
+						<td><input type="text" id="monthlyPayment3" name="monthlyPayment3"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<h2>Loan Calculator Instructions</h2>
+		<p>Fill in the numbers that you know in a given table row. Click the calculate button in that row and the results will be added to the bottom of the table. Repeat for more cases. Enter yearly interest in percent.</p>
+	</div>
+	<div class="six columns">
+		<h1>Savings Calculator</h1>
+		<form name="savings-form">
+			<table id="savings-table">
+				<thead>
+					<tr>
+						<th>Savings Goal</th>
+						<th>Interest Rate</th>
+						<th>No. of Years</th>
+						<th>Monthly Deposit</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="calculate-row">
+						<td><input type="text" id="futureValue1s" name="futureValue1"></td>
+						<td><input type="text" id="interest1s" name="interest1"></td>
+						<td><input type="text" id="numberOfYears1s" name="numberOfYears1"></td>
+						<td><a class="calculate-button" href="#" onclick="calculateMonthlyDeposit()">Calculate</a></td>
+					</tr>
+					<tr class="calculate-row">
+						<td><input type="text" id="futureValue2s" name="futureValue2"></td>
+						<td><input type="text" id="interest2s" name="interest2"></td>
+						<td><a class="calculate-button" href="#" onclick="calculateYears()">Calculate</a></td>
+						<td><input type="text" id="monthlyDeposit2s" name="monthlyDeposit2"></td>
+					</tr>
+					<tr class="calculate-row">
+						<td><a class="calculate-button" href="#" onclick="calculateFutureValue()">Calculate</a></td>
+						<td><input type="text" id="interest3s" name="interest3"></td>
+						<td><input type="text" id="numberOfYears3s" name="numberOfYears3"></td>
+						<td><input type="text" id="monthlyDeposit3s" name="monthlyDeposit3"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<h2>Savings Calculator Instructions</h2>
+		<p>This table works in the same way as the loan calculator. Enter the interest rate in percent (yearly rate). The deposits are compounded monthly. More frequent compounding will make you ever so slightly richer.</p>
+	</div>
+</div>
+<div class="footer">
+	<div class="row">
+		<div class="twelve columns centered">
+			<p class="disclaimer">This financial tool is for reference use only. It is provided free of charge without warranty.<br>Please consult a professional before making any major financial decisions.</p>
+		</div>
+	</div>
+</div>
+<!-- Included JS Files (Compressed) -->
+<script src="javascripts/foundation.min.js"></script>
+
+<!-- Initialize JS Plugins -->
+<script src="javascripts/app.js"></script>
+<script src="javascripts/jan.js"></script>
+
+  
+</body>
+</html>
